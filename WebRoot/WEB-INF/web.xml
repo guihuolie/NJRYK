@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"> 
+ 
+	<servlet>
+	    <description>This is the description of my J2EE component</description>
+	    <display-name>This is the display name of my J2EE component</display-name>
+	    <servlet-name>LoginServlet</servlet-name>
+	    <servlet-class>sp.servlet.LoginServlet</servlet-class>
+  	</servlet>
+    <servlet-mapping>
+	    <servlet-name>LoginServlet</servlet-name>
+	    <url-pattern>/servlet/LoginServlet</url-pattern>
+  	</servlet-mapping>
+  	
+    	<servlet>
+	    <description>This is the description of my J2EE component</description>
+	    <display-name>This is the display name of my J2EE component</display-name>
+	    <servlet-name>HouseKeeper</servlet-name>
+	    <servlet-class>sp.servlet.HouseKeeper</servlet-class>
+  	</servlet>
+    <servlet-mapping>
+	    <servlet-name>HouseKeeper</servlet-name>
+	    <url-pattern>/servlet/HouseKeeper</url-pattern>
+  	</servlet-mapping>
+<!-- <context-param>
+       <param-name>weblogic.httpd.inputCharset.</param-name>
+       <param-value>UTF-8</param-value>
+</context-param>
+	通用json数据方法reportservlet2
+	<servlet>
+	    <servlet-name>jReport2</servlet-name>
+	    <servlet-class>sp.servlet.ReportServlet2</servlet-class>
+	    <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		    <servlet-name>jReport2</servlet-name>
+		    <url-pattern>/jqueryReport2.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+带验证的流streamServlet
+	<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StreamServlet</servlet-name>
+    <servlet-class>sp.servlet.StreamServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>StreamServlet</servlet-name>
+    <url-pattern>/servlet/StreamServlet</url-pattern>
+  </servlet-mapping>
+    云助理二维码登录请求处理servlet add by wangneng start  删除
+
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>sp.servlet.LogoutServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+	学平险购买链接   风险小先上线待改造
+    <servlet>
+	    <servlet-name>GetWxxpServlet</servlet-name>
+	    <servlet-class>sp.servlet.GetWxxpServlet</servlet-class>
+	    <init-param>
+	            <param-name>debug</param-name>
+	            <param-value>0</param-value>
+	        </init-param>
+	        <init-param>
+	            <param-name>listings</param-name>
+	            <param-value>false</param-value>
+	        </init-param>
+	    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>GetWxxpServlet</servlet-name>
+	    <url-pattern>/getWxxp.do</url-pattern>
+	</servlet-mapping>
+用户头像有cookie验证 待改造
+	<servlet>
+	    <servlet-name>imgServlet</servlet-name>
+	    <servlet-class>sp.servlet.UserPhotoServlet</servlet-class>
+	    <init-param>
+	            <param-name>debug</param-name>
+	            <param-value>0</param-value>
+	        </init-param>
+	        <init-param>
+	            <param-name>listings</param-name>
+	            <param-value>false</param-value>
+	        </init-param>
+	    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>imgServlet</servlet-name>
+	    <url-pattern>/getUserImg.do</url-pattern>
+	</servlet-mapping>
+  根据支付URl生成支付二维码的servlet
+	<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>WxQCCocdePaySrt</servlet-name>
+    <servlet-class>sp.servlet.WxQCCocdePaySrt</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>WxQCCocdePaySrt</servlet-name>
+    <url-pattern>/WxQCCocdePay.do</url-pattern>
+  </servlet-mapping>
+数据库连接池
+    <servlet>
+	    <servlet-name>StartServlet</servlet-name>
+	    <servlet-class>sp.servlet.StartServlet</servlet-class>
+	        <init-param>
+	            <param-name>debug</param-name>
+	            <param-value>0</param-value>
+	        </init-param>
+	        <init-param>
+	            <param-name>listings</param-name>
+	            <param-value>false</param-value>
+	        </init-param>
+	    <load-on-startup>3</load-on-startup>
+	</servlet>
+	
+
+	
+	微信接口
+	 <servlet>
+	    <servlet-name>WeixinNewServlet</servlet-name>
+	    <servlet-class>sp.servlet.WeixinNewServlet</servlet-class>
+	        <init-param>
+	            <param-name>debug</param-name>
+	            <param-value>0</param-value>
+	        </init-param>
+	        <init-param>
+	            <param-name>listings</param-name>
+	            <param-value>false</param-value>
+	        </init-param>
+	    <load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>WeixinNewServlet</servlet-name>
+	    <url-pattern>/JsWeiXinNew.do</url-pattern>
+	</servlet-mapping>
+	上传文件有验证 待改造
+	<servlet>
+	    <servlet-name>uploadFileServlet</servlet-name>
+	    <servlet-class>sp.servlet.uploadFileFtpServlet</servlet-class>
+	        <init-param>
+	            <param-name>debug</param-name>
+	            <param-value>0</param-value>
+	        </init-param>
+	        <init-param>
+	            <param-name>listings</param-name>
+	            <param-value>false</param-value>
+	        </init-param>
+	    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadFileServlet</servlet-name>
+		<url-pattern>/uploadFileFtp.do</url-pattern>
+	</servlet-mapping>
+
+ 
+
+  
+	
+
+
+	
+	
+	
+		上传文件 (供云助理消息图片发送，小程序图片上传使用)
+		<servlet>
+	    <servlet-name>UploadAndDownServlet4js</servlet-name>
+	    <servlet-class>sp.servlet.UploadAndDownServlet4js</servlet-class>
+	    <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		    <servlet-name>UploadAndDownServlet4js</servlet-name>
+		    <url-pattern>/uploadAndDownServlet4js</url-pattern>
+	</servlet-mapping>
+		<servlet>
+	    <servlet-name>UploadAndDownServlet4js2</servlet-name>
+	    <servlet-class>sp.servlet.UploadAndDownServlet4js2</servlet-class>
+	    <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		    <load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		    <servlet-name>UploadAndDownServlet4js2</servlet-name>
+		    <url-pattern>/uploadAndDownServlet4js2</url-pattern>
+	</servlet-mapping>
+	
+	
+	登录图形验证码 保留
+	<servlet>
+        <servlet-name>jcaptcha</servlet-name>
+        <servlet-class>sp.servlet.CaptchaServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>jcaptcha</servlet-name>
+        <url-pattern>/captchaCode</url-pattern>
+    </servlet-mapping>
+	
+	
+	
+
+	
+	
+	<filter>
+        <filter-name>XssAndSqlFilter</filter-name>
+        <filter-class>sp.filter.XssAndSqlFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>XssAndSqlFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+	[Optional] MIME mapping
+	<mime-mapping>
+		<extension>doc</extension>
+		<mime-type>application/vnd.ms-word</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>gif</extension>
+		<mime-type>image/gif</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>htm</extension>
+		<mime-type>text/html</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>html</extension>
+		<mime-type>text/html</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jpeg</extension>
+		<mime-type>image/jpeg</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jpg</extension>
+		<mime-type>image/jpeg</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>js</extension>
+		<mime-type>text/javascript</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pdf</extension>
+		<mime-type>application/pdf</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>png</extension>
+		<mime-type>image/png</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>txt</extension>
+		<mime-type>text/plain</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xls</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xml</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>zhtml</extension>
+		<mime-type>text/html</mime-type>
+	</mime-mapping> -->
+	 <servlet>
+<servlet-name>ServletConfigurator</servlet-name>
+<servlet-class>org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>
+<init-param>
+<param-name>xmlFile</param-name>
+<param-value>WEB-INF/proxool.xml</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+	</welcome-file-list>	
+</web-app>

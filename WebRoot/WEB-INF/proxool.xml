@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<something-else-entirely>
+
+	<proxool>
+
+		<alias>hunshe2018</alias>
+
+		<driver-url>
+
+			jdbc:mysql://127.0.0.1:3306/hunshe2018
+
+		</driver-url>
+
+		<driver-class>
+
+			org.gjt.mm.mysql.Driver
+
+		</driver-class>
+
+		<driver-properties>
+
+			<property name="user" value="root" />
+
+			<property name="password" value="good11221122" />
+
+		</driver-properties>
+
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+
+		<maximum-new-connections>20</maximum-new-connections>
+
+		<prototype-count>15</prototype-count>
+
+		<maximum-connection-count>100</maximum-connection-count>
+
+		<minimum-connection-count>10</minimum-connection-count>
+
+	</proxool>
+	
+	<!-- <proxool>
+
+		<alias>pool_pams</alias>
+
+		<driver-url>
+
+			jdbc:jtds:sqlserver://10.20.144.33:1433/pams;useLOBs=false
+
+		</driver-url>
+
+		<driver-class>
+
+			net.sourceforge.jtds.jdbc.Driver
+
+		</driver-class>
+
+		<driver-properties>
+
+			<property name="user" value="pams" />
+
+			<property name="password" value="Cloud*144)" />
+
+		</driver-properties>
+
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+
+		<maximum-new-connections>20</maximum-new-connections>
+
+		<prototype-count>10</prototype-count>
+
+		<maximum-connection-count>300</maximum-connection-count>
+
+		<minimum-connection-count>20</minimum-connection-count>
+
+		<test-before-use>true</test-before-use>
+
+		<test-after-use>true</test-after-use>
+
+		<trace>true</trace>
+
+		<house-keeping-test-sql>select getdate()</house-keeping-test-sql>
+
+	</proxool> -->
+
+
+
+	
+
+
+
+  
+	
+
+	
+
+
+
+	
+
+</something-else-entirely>
+
+
+
