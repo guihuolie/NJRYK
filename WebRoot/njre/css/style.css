@@ -685,12 +685,13 @@ html,body {
 }
 /*底*/
 .footer {
-	background: #2f2f2f;
+	background: #3083b9;
 }
 
 .linkbook {
 	padding: 20px;
-	background: rgba(31,31,31,.3);
+	/* background: rgba(31,31,31,.3); */
+	background: #3083b9;
 }
 
 .linkbook .logo-bai {
@@ -701,7 +702,7 @@ html,body {
 
 .linkbook .item {
 	font-size: 14px;
-	color: #858585;
+	color: #FFF;
 }
 
 .linkbook .item p {
@@ -718,8 +719,8 @@ html,body {
 	text-align: center;
 	padding: 15px;
 	font-size: 12px;
-	background: #212121;
-	color: #656565;
+	background: #3083b9;
+	color: #FFF;
 	line-height: 2;
 }
 
@@ -733,7 +734,7 @@ html,body {
 
 .foot-nav {
 	padding: 20px 0;
-	background: #2f2f2f;
+	background: #3083b9;
 	text-align: center;
 }
 
