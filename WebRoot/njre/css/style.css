@@ -685,13 +685,13 @@ html,body {
 }
 /*底*/
 .footer {
-	background: #3083b9;
+	background: #F3F4F8;
 }
 
 .linkbook {
 	padding: 20px;
 	/* background: rgba(31,31,31,.3); */
-	background: #3083b9;
+	background: #F3F4F8;
 }
 
 .linkbook .logo-bai {
@@ -702,7 +702,7 @@ html,body {
 
 .linkbook .item {
 	font-size: 14px;
-	color: #FFF;
+	color: #333983;
 }
 
 .linkbook .item p {
@@ -718,14 +718,14 @@ html,body {
 .copyright {
 	text-align: center;
 	padding: 15px;
-	font-size: 12px;
-	background: #3083b9;
-	color: #FFF;
+	font-size: 15px;
+	background: #E1E3E5;
+	color: #7798C2;
 	line-height: 2;
 }
 
 .copyright a:link,.copyright a:hover,.copyright a:visited,.copyright a:active {
-	color: #656565;
+	color: #7798C2;
 }
 
 .foot-navp {
@@ -734,7 +734,7 @@ html,body {
 
 .foot-nav {
 	padding: 20px 0;
-	background: #3083b9;
+	background: #F3F4F8;
 	text-align: center;
 }
 
@@ -747,7 +747,7 @@ html,body {
 .foot-nav>li>a {
 	display: block;
 	font-size: 18px;
-	color: #9f9f9f;
+	color: #333983;
 	padding: 20px 5px;
 	text-align: center;
 }
@@ -759,13 +759,13 @@ html,body {
 .foot-nav ul>li>a {
 	display: block;
 	font-size: 15px;
-	color: #707070;
+	color: #333983;
 	padding: 10px;
 	text-align: center;
 }
 
 .foot-nav>li>a:hover,.foot-nav ul>li>a:hover {
-	color: #fff;
+	color: #F4A829;
 }
 
 .bdshare .bdshare-button-style2-24 a {
@@ -2228,7 +2228,7 @@ select::-ms-expand {
     /*.subnav{margin-right: 0;}*/
 	.subnav-item {
 		width: 80px;
-		height: 330px;
+		height: 200px;
 		padding: 5px;
 	}
 
@@ -2497,7 +2497,7 @@ select::-ms-expand {
     /*  .subnav{margin-right: 56px;}*/
 	.subnav-item {
 		width: 88px;
-		height: 330px;
+		height: 200px;
 		padding: 7px;
 	}
 
@@ -2812,7 +2812,7 @@ select::-ms-expand {
     /*    .subnav{margin-right: 77px;}*/
 	.subnav-item {
 		width: 100px;
-		height: 340px;
+		height: 220px;
 	}
 
 	.subnav-item a {
