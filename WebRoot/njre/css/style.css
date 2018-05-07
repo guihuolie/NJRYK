@@ -720,12 +720,12 @@ html,body {
 	padding: 15px;
 	font-size: 15px;
 	background: #E1E3E5;
-	color: #7798C2;
+	color: #333983;
 	line-height: 2;
 }
 
 .copyright a:link,.copyright a:hover,.copyright a:visited,.copyright a:active {
-	color: #7798C2;
+	color: #333983;
 }
 
 .foot-navp {
@@ -1981,7 +1981,7 @@ select::-ms-expand {
 	left: 0;
 	z-index: 99;
 	width: 100%;
-	background: #3083b9;
+	background: #4482b7;
 }
 
 .subnav {
