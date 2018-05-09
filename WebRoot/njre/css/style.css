@@ -836,14 +836,27 @@ html,body {
 }
 
 /* totop */
-.totop {
+/* .totop {
 	position: fixed;
 	right: 0;
 	bottom: 20%;
 	z-index: 10;
 	width: 40px;
 	cursor: pointer;
+} */
+
+.qqlogo {
+	position: fixed;
+	right: 0px;
+	bottom: 20%;
+	z-index: 10;
+	width: 60px;
+	text-align: center;
+	font-size:10px;
+	background-color: #FFF;
+	border-radius:8px;
 }
+
 /* 页面标题 */
 .lead-banner {
 	background-position: center center;
