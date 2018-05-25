@@ -76,6 +76,9 @@ public class LoginServlet extends HttpServlet {
 					String tx_name=URLEncoder.encode(request.getParameter("tx_name"),"UTF-8");
 					String tx_de=URLEncoder.encode(request.getParameter("tx_de"),"UTF-8");
 					String tx_s=URLEncoder.encode(request.getParameter("tx_s"),"UTF-8");
+					//san_guo7_te_xing
+					result.put("returnCode", insert_sg7_texing(tx_name.replaceAll("\\s*", ""),tx_de,tx_s));
+					
 				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -88,7 +91,34 @@ public class LoginServlet extends HttpServlet {
 		out.close();
 	}
 	
-	
+	public String insert_sg7_texing(String tx_name,String tx_de,String tx_s){
+		
+
+		try {
+			String sql=" from san_guo7_te_xing where tx_name=? ";
+			int up_num=pool.getSQLResultCnt(sql,
+					new Object[] {tx_name});
+			if(up_num==0){
+				sql="INSERT into san_guo7_te_xing (tx_name,tx_de,tx_s,in_time)"
+						+ " VALUES(?,?,?,NOW())";
+				up_num = pool.executeUpdate(sql,
+						new Object[] {tx_name,tx_de,tx_s});
+				if(up_num==0){
+					return "1000";
+				}else{
+					return "1001";
+				}
+			}else{
+				return "1002";
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+			return "1003";
+		}
+		
+	}
 	
 	public String login_user(JSONObject json){
 		String userName=json.getString("userName");
