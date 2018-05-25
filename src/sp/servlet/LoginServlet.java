@@ -23,8 +23,10 @@ import net.sf.json.JSONObject;
 import org.js.db.PoolManager;
 import org.js.db.PoolManagerCommit;
 
+
 import sp.util.BASE64;
 import sp.util.DesUtils;
+import sun.misc.BASE64Decoder;
 
 
 public class LoginServlet extends HttpServlet {
@@ -73,11 +75,16 @@ public class LoginServlet extends HttpServlet {
 				des = new DesUtils("sgqyz7");
 				String version=des.decrypt(type);
 				if(version.equals("ywjqb6.0")){
-					String tx_name=URLEncoder.encode(request.getParameter("tx_name"),"UTF-8");
-					String tx_de=URLEncoder.encode(request.getParameter("tx_de"),"UTF-8");
-					String tx_s=URLEncoder.encode(request.getParameter("tx_s"),"UTF-8");
-					//san_guo7_te_xing
-					result.put("returnCode", insert_sg7_texing(tx_name.replaceAll("\\s*", ""),tx_de,tx_s));
+					if("insert".equals(request.getParameter("doing"))){
+						
+						String tx_name=new String((new BASE64Decoder()).decodeBuffer(request.getParameter("tx_name")),"utf-8");
+						String tx_de=new String((new BASE64Decoder()).decodeBuffer(request.getParameter("tx_de")),"utf-8");
+						String tx_s=new String((new BASE64Decoder()).decodeBuffer(request.getParameter("tx_s")),"utf-8");
+						//san_guo7_te_xing
+						result.put("returnCode", insert_sg7_texing(tx_name.replaceAll("\\s*", ""),tx_de,tx_s));
+					}else if("search".equals(request.getParameter("doing"))){
+						result=search_sg7_texing();
+					}
 					
 				}
 			} catch (Exception e) {
@@ -91,6 +98,45 @@ public class LoginServlet extends HttpServlet {
 		out.close();
 	}
 	
+	
+	public JSONObject  search_sg7_texing(){
+		
+		List<Map> list=new ArrayList<Map>();
+		try {
+			String sql="select  * from san_guo7_te_xing limit 0,150  ";
+			list=pool.getSQLMapResult(sql,
+					new Object[] {});
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+			
+		}
+		
+		 return getjson(list, null);
+	}
+	
+	/**
+	 * 
+	 * @param ls
+	 *            数据列表
+	 * @param mp
+	 *            单独的值
+	 * @return
+	 */
+	public  JSONObject getjson(List<Map> ls, Map mp) {
+		Map<String, Object> jsons = new HashMap<String, Object>();
+		jsons.put("total", ls.size());// total键 存放总记录数，必须的
+		jsons.put("rows", ls);// rows键 存放每页记录 list
+		if (null!=mp) {
+			jsons.putAll(mp);
+		}
+		JSONObject jsonobj = new JSONObject();
+		
+		
+		return JSONObject.fromObject(jsons);
+	}
 	public String insert_sg7_texing(String tx_name,String tx_de,String tx_s){
 		
 

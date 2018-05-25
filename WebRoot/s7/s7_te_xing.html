@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>产品e查</title>
+    <title>6.0原味加强版武将特性</title>
     <link rel="stylesheet" href ="./css/weui.min.css">
     <link rel="stylesheet" href ="./css/jquery-weui.min.css">
     <link rel="stylesheet" href="https://cdn.jsclyun.net/wxreport/common/js/mobilebone/mobilebone.css">
@@ -34,6 +34,16 @@
 </head>
 <body >
     <div class="container" id="app">
+    
+    	<div class="page out home" id="page_0">
+    	<h1 class="demos-title">6.0原味加强版武将特性</h1>
+			<div class="weui-btn-area" >
+				<a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="t0_1">特性录入</a>
+				<a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="t0_2">特性查询</a>
+
+            </div>
+        </div>
+    
        <div class="page out home" id="page_1">
        		<h1 class="demos-title">6.0原味加强版武将特性</h1>
        		<div class="weui-cells weui-cells_form">
@@ -58,13 +68,24 @@
   				</div>
    			</div>
 			<div class="weui-btn-area" >
-                    <!-- <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default" v-on:click="backStep2">上一步</a> -->
+					<a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="backStep2">上一步</a>
                     <a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="submitStep1">提交</a>
             </div>
 		</div>
 		
         
+        <div class="page out home" id="page_2">
+			<div class="weui-cells__title title">特性列表</div>
+			<div id="load_select2">
+			</div>
+						
+			<div class="weui-btn-area" >
+                    <a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="backStep3">返回</a>
+                    <!-- <a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="submitStep1">下一步</a> -->
+            </div>
+        </div>
         
+          
  		
 
  		<div id="special" class="weui-popup__container">
