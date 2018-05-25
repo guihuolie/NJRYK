@@ -223,11 +223,11 @@ public class DesUtils {
     */
    public static void main(String[] args) {
      try {
-       String test = "Admin12*)";
-       DesUtils des = new DesUtils("sssss");//自定义密钥   
+       String test = "ywjqb6.0";
+       DesUtils des = new DesUtils("sgqyz7");//自定义密钥   
        System.out.println("加密前的字符：" + test);
        System.out.println("加密后的字符：" + des.encrypt(test));
-       System.out.println("解密后的字符：" + des.decrypt(des.encrypt(test)));
+       System.out.println("解密后的字符：" + des.decrypt("d0fb935839bb9d46f077ab170a2ee23c"));
        
        //System.out.println("解密后的字符：" + des.decrypt("202cb962ac59075b964b07152d234b70"));
      String branch_no="3202";

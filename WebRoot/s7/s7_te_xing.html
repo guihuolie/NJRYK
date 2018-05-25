@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>产品e查</title>
+    <link rel="stylesheet" href ="./css/weui.min.css">
+    <link rel="stylesheet" href ="./css/jquery-weui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsclyun.net/wxreport/common/js/mobilebone/mobilebone.css">
+    <link rel="stylesheet" href ="https://cdn.jsclyun.net/wxreport/app/css/main.css">
+    <script src="https://cdn.jsclyun.net/charts/js/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsclyun.net/wxreport/common/js/util.js?v2"></script>
+    <script src="https://cdn.jsclyun.net/wxreport/js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.jsclyun.net/wxreport/js/common2.js"></script>
+    <script src="https://cdn.jsclyun.net/wxreport/common/js/layer_mobile2/layer.js"></script>
+    <script src="https://cdn.jsclyun.net/wxreport/common/js/mobilebone/mobilebone.js"></script>
+    <script src="https://cdn.jsclyun.net/wxreport/common/js/iscroll.js"></script>
+    <script src="https://cdn.jsclyun.net/sp/bootstrap-3.3.5/datetimepicker/js/moment-with-locales.min.js" charset="UTF-8"></script>
+    <script src="../../charts/js/vue.js"></script>
+    <!-- <base href="/yunweb/sp/mobi/" /> -->
+	<style type="text/css">
+		.title {
+	  		font-size: 18px;
+		}
+		.demos-title {
+		    text-align: center;
+		    font-size: 20px;
+		    color: #3cc51f;
+		    font-weight: 400;
+		    margin: 0 15%;
+		}
+	</style>
+  
+</head>
+<body >
+    <div class="container" >
+       <div class="page out home" id="page_1">
+       		<h1 class="demos-title">6.0原味加强版武将特性</h1>
+       		<div class="weui-cells weui-cells_form">
+       		  	<div class="weui-cell">
+    				<div class="weui-cell__hd"><label class="weui-label">特性名称</label></div>
+    				<div class="weui-cell__bd">
+      					<input class="weui-input" id="tx_name" placeholder="请输入特性名称">
+   					 </div>
+  				</div>
+  				<div class="weui-cell">
+    				<div class="weui-cell__hd"><label class="weui-label">特性详情</label></div>
+    				<div class="weui-cell__bd">
+      					<input class="weui-input" id="tx_de" placeholder="请输入特性详情">
+   					 </div>
+  				</div>
+  				
+  					<div class="weui-cell">
+    				<div class="weui-cell__hd"><label class="weui-label">特性持有人</label></div>
+    				<div class="weui-cell__bd">
+      					<input class="weui-input" id="tx_s" placeholder="请输入任意武将名称用于核实">
+   					 </div>
+  				</div>
+   			</div>
+			<div class="weui-btn-area" >
+                    <!-- <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default" v-on:click="backStep2">上一步</a> -->
+                    <a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="submitStep1">提交</a>
+            </div>
+		</div>
+		
+        
+        
+ 		
+
+ 		<div id="special" class="weui-popup__container">
+          <div class="weui-popup__overlay"></div>
+          <div class="weui-popup__modal">
+            <div class="page__hd">
+                <h1 class="page__title " id="special_title" style="text-align:center"></h1>
+            </div>
+            <article class="weui-article" id="special_content">
+                
+            </article>
+            <a href="javascript:;" class="weui-btn weui-btn_primary" v-on:click="closePopup">关闭</a>
+          </div>
+        </div>
+        
+       
+    </div>
+    <script src="./js/jquery-weui.min.js?v=12"></script>
+    <script src="./js/js_util.js?v=3.8"></script>
+    <script src="./js/s7_te_xing?v=3.84"></script>
+</body>
+</html>

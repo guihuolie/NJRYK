@@ -53,25 +53,42 @@ public class LoginServlet extends HttpServlet {
 //		type=URLDecoder.decode(type, "UTF-8");
 		DesUtils des;
 		JSONObject result = new JSONObject();
-		try {
-			des = new DesUtils("sssss");
-			type = des.decrypt(request.getParameter("pams_json"));
-			JSONObject jsonObject = JSONObject.fromObject(type);
-			if(jsonObject.has("idear")&&"register".equals(jsonObject.get("idear").toString())){
-				result.put("returnCode", register_user(jsonObject));
-			}else if(jsonObject.has("idear")&&"login".equals(jsonObject.get("idear").toString())){
-				result.put("returnCode", login_user(jsonObject));
-			}
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}//自定义密钥   
+//		try {
+//			des = new DesUtils("sssss");
+//			type = des.decrypt(request.getParameter("pams_json"));
+//			JSONObject jsonObject = JSONObject.fromObject(type);
+//			if(jsonObject.has("idear")&&"register".equals(jsonObject.get("idear").toString())){
+//				result.put("returnCode", register_user(jsonObject));
+//			}else if(jsonObject.has("idear")&&"login".equals(jsonObject.get("idear").toString())){
+//				result.put("returnCode", login_user(jsonObject));
+//			}
+//			
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}//自定义密钥   
+		
+		if(type.length()>20){
+			try {
+				des = new DesUtils("sgqyz7");
+				String version=des.decrypt(type);
+				if(version.equals("ywjqb6.0")){
+					String tx_name=URLEncoder.encode(request.getParameter("tx_name"),"UTF-8");
+					String tx_de=URLEncoder.encode(request.getParameter("tx_de"),"UTF-8");
+					String tx_s=URLEncoder.encode(request.getParameter("tx_s"),"UTF-8");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}//自定义密钥 
+		}
 		
 		out.println(BASE64.getBase64(result.toString()));
 		out.flush();
 		out.close();
 	}
+	
+	
 	
 	public String login_user(JSONObject json){
 		String userName=json.getString("userName");
