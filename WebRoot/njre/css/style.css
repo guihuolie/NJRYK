@@ -9,6 +9,7 @@ section,article,aside,header,footer,nav,dialog,figure {
 	display: block
 }
 
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0
@@ -853,7 +854,7 @@ html,body {
 	width: 60px;
 	text-align: center;
 	font-size:10px;
-	background-color: #FFF;
+	background-color: #BCBDC0;
 	border-radius:8px;
 }
 
