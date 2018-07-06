@@ -6,9 +6,8 @@
     <meta name="keywords" content="keyword1,keyword2,keyword3">
     <meta name="description" content="this is my page">
     <meta name="content-type" content="text/html; charset=UTF-8">
-    
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-
+    <script src="js/jquery.min.js"></script>
+	<script src="js/utils.js"></script>
   </head>
   
   <body>
@@ -18,8 +17,8 @@
 			<a href="index.html" class="logo pull-left"><img class="img" src="img/logo.jpg" alt=""></a>
 			<small class="navbar-brand">融你我，康无限</small>
 			<div class="navbox pull-right">
-				<ul class="nav-line clearfix">
-					<li><a class="" href="index.html">首页</a></li>
+				<ul class="nav-line clearfix" id="pc_title">
+					<li><a class="active" href="index.html">首页</a></li>
 					<li><a href="./page_index/list1/01.html" class="">公司介绍</a></li>
 					<li><a href="./page_index/list2/01.html" class="">新闻中心</a></li>
 					<li><a href="./page_index/list3/01.html" class="">业务展区</a></li>
@@ -29,11 +28,36 @@
 					<li><a href="./page_index/list7/01.html" class="">联系我们</a></li>
 				</ul>
 				
+				<!-- <ul class="navul">
+					<li><a class="active" href="index.html">首页</a></li>
+					<li><a href="./page_index/list1/01.html" class="">公司介绍</a></li>
+					<li><a href="./page_index/list2/01.html" class="">新闻中心</a></li>
+					<li><a href="./page_index/list3/01.html" class="">业务展区</a></li>
+					<li><a href="./page_index/list4/01.html" class="">服务创新</a></li>
+					<li><a href="./page_index/list5/01.html" class="">&nbsp&nbsp多元融通&nbsp&nbsp</a></li>
+					<li><a href="./page_index/list6/01.html" class="">企业文化</a></li>
+					<li><a href="./page_index/list7/01.html" class="">联系我们</a></li>
+				</ul> -->
+
 				<!-- <div id="head_pc"></div> -->
 			</div>
 		</div>
 	</div>
-  
+	<script>
+	          /* $("#head_pc").load("./head_pc.html"); */
+	    $(function(){
+	    	var pc_title_index=getMyCookie('pc_title_index');
+			if(pc_title_index!=null){
+				$("#pc_title li a").removeClass('active');
+				$("#pc_title li a").eq(pc_title_index).addClass('active');
+			}
+		});
+
+		$("#pc_title li a").click(function(){
+			var index = $("#pc_title li a").index(this);
+			setMyCookie('pc_title_index',index);
+		});
+	</script>
     <nav class="navbar navbar-default visible-xs">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar" aria-expanded="false">
@@ -108,11 +132,9 @@
 	</div>
 	</nav>
 	
-	<script src="js/jquery.min.js"></script>
 	
-	<script>
-          $("#head_pc").load("./head_pc.html");
-    </script>
+	
+	
 	
   </body>
 </html>
