@@ -84,7 +84,7 @@ html,body {
 	width: 100%;
 	font-family: "microsoft yahei";
 	font-size: 16px;
-	background: #fff;
+	background: #f5f5f5;
 	overflow-x: hidden;
 }
 
@@ -686,13 +686,13 @@ html,body {
 }
 /*底*/
 .footer {
-	background: #F3F4F8;
+	background: #3f3e3e;
 }
 
 .linkbook {
 	padding: 20px;
 	/* background: rgba(31,31,31,.3); */
-	background: #F3F4F8;
+	background: #e3e3e3;
 }
 
 .linkbook .logo-bai {
@@ -735,7 +735,7 @@ html,body {
 
 .foot-nav {
 	padding: 20px 0;
-	background: #F3F4F8;
+	background: #e3e3e3;
 	text-align: center;
 }
 
@@ -748,7 +748,7 @@ html,body {
 .foot-nav>li>a {
 	display: block;
 	font-size: 18px;
-	color: #333983;
+	color: #fff;
 	padding: 20px 5px;
 	text-align: center;
 }
@@ -849,7 +849,7 @@ html,body {
 .qqlogo {
 	position: fixed;
 	right: 0px;
-	bottom: 20%;
+	bottom: 25%;
 	z-index: 10;
 	width: 60px;
 	text-align: center;
@@ -2601,7 +2601,7 @@ select::-ms-expand {
 	}
 
 	.foot-navp {
-		width: 73%;
+		width: 100%;
 	}
 
 	.foot-nav {
@@ -2998,31 +2998,9 @@ select::-ms-expand {
     font-size: 16px;
 }
 
-.navul {
-    float: right;
-    margin-top: 26px;
-    background: url(../img/line1.jpg) left center no-repeat;
-    margin-right: 60px; 
-}
 
-.navul li {
-    float: left;
-    width: 80px;
-    height: 34px;
-    text-align: center;
-    line-height: 34px;
-    background: url(../img/line1.jpg) right center no-repeat;
-}
 
-.navul li a {
-    display: block;
-    width: 100%;
-    height: 34px;
-    overflow: hidden;
-    background: url(../img/line2.jpg) center 34px no-repeat;
-    color: #525151;
-    font-size: 18px;
-}
+
 
 .bigdiv {
     width: 1000px;
@@ -3059,19 +3037,7 @@ select::-ms-expand {
     bottom: 0;
 }
 
-#sy_section3 .client_ul li .client_bubble {
-    background: url(../images/new-index/bubble.png);
-    width: 271px;
-    height: 106px;
-    position: absolute;
-    left: 100px;
-    top: 20px;
-    color: #333;
-    font-size: 14px;
-    text-indent: 2em;
-    padding: 5px 30px 20px 35px;
-    line-height: 22px;
-}
+
 
 
 .zcBox {

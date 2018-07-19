@@ -15,6 +15,7 @@
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/swiper-3.4.2.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/yimi/style.css">
 
 <!-- <script>
 	var _hmt = _hmt || [];
@@ -48,10 +49,27 @@
 	</div> -->
 	
 	 
-	
+	<div class="visible-sm visible-md visible-lg">
+		<div class="top clearfix">
+			<a href="index.html" class="logo pull-left"><img class="img" src="img/logo.jpg" alt=""></a>
+			<small class="navbar-brand">融你我，康无限</small>
+			<div class="navbox pull-right" style="margin-right: 130px">
+				<ul class="navul">
+					<li><a id="index" class="navLight" href="index.html">首页</a></li>
+					<li><a href="./page_index/list1/01.html" class="">公司介绍</a></li>
+					<li><a href="./page_index/list2/01.html" class="">新闻中心</a></li>
+					<li><a href="./page_index/list3/01.html" class="">业务展区</a></li>
+					<li><a href="./page_index/list4/01.html" class="">服务创新</a></li>
+					<!--<li><a href="./page_index/list5/01.html" class="">&nbsp&nbsp多元融通&nbsp&nbsp</a></li> 
+					<li><a href="./page_index/list6/01.html" class="">企业文化</a></li>-->
+					<li><a href="./page_index/list7/01.html" class="">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div id="head_mobile"></div>
 	
-	
+	<div style="height: 20px"></div>
 	<div class="swiper-container" id="js-swiper-banner">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
@@ -257,7 +275,7 @@
 	</div>
 	
 	<div style="height: 60px;margin-top: 20px">
-		<div class="tit1"><em>合作案例</em><i>Cooperation case</i></div>
+		<div class="tit1"><em>公司动态</em><i>company dynamic</i></div>
 		
 	</div>
 	
@@ -301,7 +319,7 @@
 	<div style="clear:both"></div>
 </div> -->
 
-<div class="main main-pd" style="width: 80%">
+<div class="main main-pd" style="width: 80%;margin-left: 10%">
 	<div class="clearfix gongyi-lists row-collapse" id="data_list">
 	</div>
 	<div class="load loadmoredata" style="display:none;">
@@ -309,23 +327,23 @@
 	</div>
 </div>
 <script type='text/html' id='data_listTpl'> 
-<div class="col-xs-6 col-sm-4 col-md-6 col-lg-6"> 
+<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"> 
 	<a class="gongyi-list" href="<%=url%>"> 
-		<img class="img" src="<%=img_url%>" alt="" style="width: 80%"/> 
+		<img class="img" src="<%=img_url%>" alt="" style="width: 90%;height:150px" /> 
 		<div class="gongyi-list-item"> 
 			<h3 class="t"><%=post_title%></h3> 
-			<div class="m"><%=post_desc%></div> 
+			<!--<div class="m"><%=post_desc%></div>-->
 			<div class="art-num"> 
 				<span>
 					<img src="img/wx7.png">
 					<i><%=push_timestr%></i>
 				</span> 
 			</div> 
+ 			
 		</div> 
 	</a> 
 </div> 
 </script>
-	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper-3.4.2.min.js"></script>
@@ -336,12 +354,17 @@
           $("#foot").load("./foot.html");
           $("#head_mobile").load("./head_mobile.html");
           /* $("#head_pc").load("./head_pc.html"); */
-          var listdata = [{"n_id":"1","post_title":"xx卫计委","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img01.jpg","push_time":"1524585600","link_url":"","atturl":null,"post_hits":"1","post_desc":"说明1","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-25"},
+         /*  var listdata = [{"n_id":"1","post_title":"xx卫计委","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img01.jpg","push_time":"1524585600","link_url":"","atturl":null,"post_hits":"1","post_desc":"说明1","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-25"},
                 {"n_id":"2","post_title":"xx儿童医院","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img02.jpg","push_time":"1524586600","link_url":"","atturl":null,"post_hits":"2","post_desc":"说明2","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-26"},
                 {"n_id":"3","post_title":"xx儿童医院","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img02.jpg","push_time":"1524586600","link_url":"","atturl":null,"post_hits":"2","post_desc":"说明2","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-26"},
                 {"n_id":"4","post_title":"xx儿童医院","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img02.jpg","push_time":"1524586600","link_url":"","atturl":null,"post_hits":"2","post_desc":"说明2","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-26"},
-                {"n_id":"5","post_title":"xx儿童医院","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img02.jpg","push_time":"1524586600","link_url":"","atturl":null,"post_hits":"2","post_desc":"说明2","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-26"},];
-		listdatatpl(listdata,'append');
+                {"n_id":"5","post_title":"xx儿童医院","post_seouri":"news_info31","post_cate":"1","lang":"zh","img_url":"img/img02.jpg","push_time":"1524586600","link_url":"","atturl":null,"post_hits":"2","post_desc":"说明2","catetype":"1","url":"javascript:void(0);","push_timestr":"2018-04-26"},]; */
+        var listdata = [{"n_id":"1","post_title":"我司创始人刘峰那次大会主题发言，余音绕梁四十多日仍受高层关注","img_url":"img/newsImg/20180408.png","post_desc":"说明1","url":"https://mp.weixin.qq.com/s/QN3KY9GXhwIrya7qXKR_Fw","push_timestr":"2018-04-08"},
+                        {"n_id":"2","post_title":"独立第三方推出重磅！我司融e付-商保理赔直付平台全面上市","img_url":"img/newsImg/20180511.jpg","post_desc":"说明2","url":"https://mp.weixin.qq.com/s/AoyzBV6ha13DtAXJwXR6rw","push_timestr":"2018-05-11"},
+                        {"n_id":"3","post_title":"曹文献将军视察我司，盛赞发展有思路、有创新、有效率……","img_url":"img/newsImg/20180518.png","post_desc":"说明2","url":"https://mp.weixin.qq.com/s/AoyzBV6ha13DtAXJwXR6rw","push_timestr":"2018-05-18"},
+                        {"n_id":"4","post_title":"我司“融e付-商保理赔直付”平台获得准入昆山市卫计委区域卫生信息平台","img_url":"img/newsImg/20180706.png","post_desc":"说明2","url":"https://mp.weixin.qq.com/s/8V7Crzmm1XI23WJfbxR9RQ","push_timestr":"2018-07-06"},
+                        ];
+        listdatatpl(listdata,'append');
 		
 		function listdatatpl(lists,type){
 			$('.loading').remove();

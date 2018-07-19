@@ -1,0 +1,90 @@
+img {
+	border: 0;
+}
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.slides {
+	width: 100%;
+	height: 406px;
+	position: relative;
+	overflow: hidden;
+	min-width:1000px;
+}
+.slideInner {
+	height: 406px;
+	position: relative;
+	left: 0;
+	margin-left: 0;
+	min-width:1000px;
+}
+.slideInner a {
+	display: block;
+	height: 406px;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	text-align: center;
+	width:1920px;
+	z-index: 1;
+}
+
+.nav {
+	width: 1200px;
+	position: relative;
+	left: 50%;
+	margin-left: -600px;
+	display: none;
+	margin-top:200px;
+}
+.nav a {
+	display: block;
+	width: 40px;
+	height: 60px;
+	opacity:1;
+	z-index: 9;
+}
+.nav a.prev {
+	position: absolute;
+	left: 0;
+	top: -350px;
+	margin-top: -58px;
+	background:url(../images/arrow_left_hover.png) no-repeat;
+}
+.nav a.next {
+	position: absolute;
+	right: 0;
+	top: -350px;
+	margin-top: -58px;
+	background:url(../images/arrow_right_hover.png) no-repeat;
+}
+.navListBox {
+	position: absolute;
+	left: 50%;
+	top: 375px;
+	z-index: 99;
+}
+.navListBox li {
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin-left: 10px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.navListBox li:first-child {
+	margin-left: 0;
+}
+.navListBox li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 5px #666 inset;
+}
+.navListBox li a.active {
+	background-color: #55ddff;
+}
